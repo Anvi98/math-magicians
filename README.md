@@ -1,5 +1,5 @@
 # Sneak peek: Math magicians React Project Overall
-
+## Table of Content
 - [Learning-Objective](#learning-objectives)
 - [Description](#description)
 - [How-To-Build-it](#how-to-build)
