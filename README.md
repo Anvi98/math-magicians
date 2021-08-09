@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Sneak peek: Math magicians React Project Overall
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Learning objectives
+- Understand how to use medium-fidelity wireframes to create a UI.
 
-## Available Scripts
 
-In the project directory, you can run:
+## Description
 
-### `yarn start`
+"Math magicians" is a website for all fans of mathematics. It is a Single Page App (SPA) that allows users to:
+- Make simple calculations.
+- Read a random math-related quote.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+By building this application, you will learn how to use React.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### How to build the "Math magicians" website
 
-### `yarn test`
+We will start by building the core functionality, which is a calculator. At the very beginning the website will contain only the simple UI presented below, but it will be able to perform all math operations. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="center">
+  <img src="./images/calculator.png" alt="Calculator" width="300px" />
+</p>
 
-### `yarn build`
+Once the calculator is ready we will use it as a part of a full website that includes 3 sub-pages:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<p align="center">
+  <img src="./images/math_magicians_home.png" alt="Core elements" width="450px"  />
+  <img src="./images/math_magicians_calculator.png" alt="Core elements" width="450px"  />
+  <img src="./images/math_magicians_quote.png" alt="Core elements" width="450px"  />
+</p>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Projects list
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+We will be building your "Math magicians" website for more than a whole week. Here is the list of projects that will guide you through the steps described above. We will find details about each of the project requirements in the upcoming program activities. In some of the projects, we will be working collaboratively by using pair programming.
 
-### `yarn eject`
+- Project 1: Setup.
+- Project 2: Components.
+- Project 3: Events.
+- Project 4: Refactor with hooks (pair programming).
+- Project 5: Full website.
+- Project 6: Tests (pair programming).
+- Exercise: Deploy.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+------
