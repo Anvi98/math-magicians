@@ -49,11 +49,14 @@ To be able to work on the same project or making some review, you should follow 
   ````
   cd math magicians
   ````
+    ````
+  npm install
   ````
-  yarn build
+  ````
+  npm build
   ````
   ````
-  yarn start
+  npm start
   ````
 
 ### Projects list
