@@ -7,14 +7,16 @@ class Calculator extends React.Component {
     super(props);
 
     this.state = {
-      input: '',
+      input: 0,
     };
   }
 
   render() {
     return (
       <div className='calculator'>
+        <div className="input-calc">
         <Input input={this.state.input}/>
+        </div>
       <div className='row'>
           <Buttons>AC</Buttons>
           <Buttons>+/-</Buttons>

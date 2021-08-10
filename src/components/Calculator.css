@@ -17,3 +17,8 @@
   flex: 1;
   color: #fff;
 }
+
+.input-calc {
+  justify-items: right;
+  width: 100%;
+}
