@@ -7,10 +7,9 @@
   background-color: #858282;
   color: #fff;
   padding: 0.5em;
-  outline: 1px solid #888888;
+  outline: 1px solid #888;
 }
 
 .input-t {
   flex-basis: 100%;
-
 }

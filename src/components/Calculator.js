@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Buttons from './Buttons.js';
 import Input from './Input.js';
