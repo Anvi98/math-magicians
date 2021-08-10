@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
+import Calculator from './components/Calculator.js';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="calculator">
+      <div className="row">
+          <Calculator>AC</Calculator>
+          <Calculator>+/-</Calculator>
+          <Calculator>%</Calculator>
+          <Calculator>+</Calculator>
+        </div>
+        <div className="row">
+          <Calculator>7</Calculator>
+          <Calculator>8</Calculator>
+          <Calculator>9</Calculator>
+          <Calculator>x</Calculator>
+        </div>
+        <div className="row">
+          <Calculator>4</Calculator>
+          <Calculator>5</Calculator>
+          <Calculator>6</Calculator>
+          <Calculator>-</Calculator>
+        </div>
+        <div className="row">
+          <Calculator>1</Calculator>
+          <Calculator>2</Calculator>
+          <Calculator>3</Calculator>
+          <Calculator>+</Calculator>
+        </div>
+        <div className="row">
+          <Calculator>0</Calculator>
+          <Calculator>.</Calculator>
+          <Calculator>=</Calculator>
+        </div>
+      </div>
     </div>
   );
 }
