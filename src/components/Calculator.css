@@ -1,3 +1,13 @@
+.calculator {
+  width: 400px;
+  height: 600px;
+}
+
+.input-calc {
+  width: 100%;
+}
+
+
 .button-wrapper {
   height: 4em;
   display: flex;
@@ -18,7 +28,3 @@
   color: #fff;
 }
 
-.input-calc {
-  justify-items: right;
-  width: 100%;
-}

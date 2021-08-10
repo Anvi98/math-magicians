@@ -3,15 +3,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.js';
-import Calculator from './components/Calculator.js';
-import reportWebVitals from './reportWebVitals.js';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-    <Calculator />
-  </React.StrictMode>,
-  document.getElementById('root'),
-);
-
-reportWebVitals();
+ReactDOM.render(<App />, document.getElementById('root'));
