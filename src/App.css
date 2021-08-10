@@ -15,3 +15,11 @@
   display: flex;
   width: 100%;
 }
+
+.last-row {
+  display: flex;
+}
+
+.hey {
+  flex-basis: 50%;
+}

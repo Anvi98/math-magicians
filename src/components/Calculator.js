@@ -1,16 +1,54 @@
 import React from 'react';
-import './Calculator.css';
-/* eslint-disable arrow-body-style */
-/* eslint-disable no-restricted-globals */
+import Buttons from './Buttons.js';
+import Input from './Input.js';
 
-const isOperator = (val) => {
-  return !isNaN(val) || val === '.' || val === '=';
-};
+class Calculator extends React.Component {
+  constructor(props) {
+    super(props);
 
-const Calculator = (props) => (
-    <div
-      className = {`button-wrapper ${isOperator(props.children) ? null : 'operator'}`}>
-      {props.children}
-    </div>
-);
+    this.state = {
+      input: '',
+    };
+  }
+
+  render() {
+    return (
+      <div className='calculator'>
+        <Input input={this.state.input}/>
+      <div className='row'>
+          <Buttons>AC</Buttons>
+          <Buttons>+/-</Buttons>
+          <Buttons>%</Buttons>
+          <Buttons>+</Buttons>
+        </div>
+        <div className='row'>
+          <Buttons>7</Buttons>
+          <Buttons>8</Buttons>
+          <Buttons>9</Buttons>
+          <Buttons>x</Buttons>
+        </div>
+        <div className='row'>
+          <Buttons>4</Buttons>
+          <Buttons>5</Buttons>
+          <Buttons>6</Buttons>
+          <Buttons>-</Buttons>
+        </div>
+        <div className='row'>
+          <Buttons>1</Buttons>
+          <Buttons>2</Buttons>
+          <Buttons>3</Buttons>
+          <Buttons>+</Buttons>
+        </div>
+        <div className='last-row'>
+          <div className='hey'>
+          <Buttons>0</Buttons>
+          </div>
+          <Buttons>.</Buttons>
+          <Buttons>=</Buttons>
+        </div>
+      </div>
+    );
+  }
+}
+
 export default Calculator;

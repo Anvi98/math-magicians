@@ -6,12 +6,14 @@
   font-weight: lighter;
   font-size: 1.4em;
   background-color: #e0e1e6;
-  color: #888;
+  color: rgb(49, 49, 49);
   flex: 1;
   outline: 1px solid #888;
 }
 
 .operator {
   background-color: #fe9241;
+  display: flex;
+  flex: 1;
   color: #fff;
 }
