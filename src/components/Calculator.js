@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
+/* eslint-disable max-len */
 import React from 'react';
 import Buttons from './Buttons.js';
 import Input from './Input.js';
-import operate from '../logic/operate.js';
 import calculate from '../logic/calculate.js';
 
 class Calculator extends React.Component {
@@ -10,19 +10,36 @@ class Calculator extends React.Component {
     super(props);
 
     this.state = {
-      input: '',
+      total: null,
+      next: null,
+      operation: null,
     };
+    this.addToInput = this.addToInput.bind(this);
   }
 
   addToInput = (val) => {
-    this.setState({ input: this.state.input + val });
+    calculate(this.state, val);
+    const { next, total, operation } = calculate(this.state, val);
+    if (next !== undefined) {
+      this.setState({ next });
+    }
+
+    if (total !== undefined) {
+      this.setState({ total });
+    }
+
+    if (operation !== undefined) {
+      this.setState({ operation });
+    }
+
+    console.log(this.state);
   }
 
   render() {
     return (
       <div className='calculator'>
         <div className="input-calc">
-        <Input input={this.state.input}/>
+        <Input input={this.state}/>
         </div>
       <div className='row'>
           <Buttons handleClick={this.addToInput}>AC</Buttons>

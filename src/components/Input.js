@@ -2,6 +2,31 @@
 import React from 'react';
 import './Input.css';
 
-const Input = (props) => <div className='input'><div className='input-t'>{props.input}</div></div>;
+class Input extends React.Component {
+  constructor(props) {
+    super(props);
 
+    this.state = {};
+  }
+
+  render() {
+    console.log(this.props.input.total);
+
+    const { total, next, operation } = this.props.input;
+    let display = '0';
+    if (total) {
+      display = total;
+    }
+    if (next) {
+      display = next;
+    }
+    // if (operation) {
+    //   display = operation;
+    // }
+
+    return (
+      <div className='input'><div className='input-t'>{ display }</div></div>
+    );
+  }
+}
 export default Input;
