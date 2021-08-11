@@ -31,8 +31,6 @@ class Calculator extends React.Component {
     if (operation !== undefined) {
       this.setState({ operation });
     }
-
-    console.log(this.state);
   }
 
   render() {

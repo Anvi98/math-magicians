@@ -10,9 +10,7 @@ class Input extends React.Component {
   }
 
   render() {
-    console.log(this.props.input.total);
-
-    const { total, next, operation } = this.props.input;
+    const { total, next } = this.props.input;
     let display = '0';
     if (total) {
       display = total;
@@ -20,9 +18,6 @@ class Input extends React.Component {
     if (next) {
       display = next;
     }
-    // if (operation) {
-    //   display = operation;
-    // }
 
     return (
       <div className='input'><div className='input-t'>{ display }</div></div>
