@@ -1,4 +1,5 @@
-import operate from './operate';
+/* eslint-disable no-else-return */
+import operate from './operate.js';
 
 function isNumber(item) {
   return !!item.match(/[0-9]+/);
@@ -51,7 +52,7 @@ export default function calculate(obj, buttonName) {
       if (obj.next.includes('.')) {
         return {};
       }
-      return { next: obj.next + '.' };
+      return { next: `${obj.next}.` };
     }
     if (obj.operation) {
       return { next: '0.' };
@@ -60,7 +61,7 @@ export default function calculate(obj, buttonName) {
       if (obj.total.includes('.')) {
         return {};
       }
-      return { total: obj.total + '.' };
+      return { total: `${obj.total}.` };
     }
     return { total: '0.' };
   }
