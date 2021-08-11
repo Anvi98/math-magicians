@@ -8,8 +8,12 @@ class Calculator extends React.Component {
     super(props);
 
     this.state = {
-      input: 0,
+      input: '',
     };
+  }
+
+  addToInput = (val) => {
+    this.setState({ input: this.state.input + val });
   }
 
   render() {
@@ -19,35 +23,35 @@ class Calculator extends React.Component {
         <Input input={this.state.input}/>
         </div>
       <div className='row'>
-          <Buttons>AC</Buttons>
-          <Buttons>+/-</Buttons>
-          <Buttons>%</Buttons>
-          <Buttons>+</Buttons>
+          <Buttons handleClick={this.addToInput}>AC</Buttons>
+          <Buttons handleClick={this.addToInput}>+/-</Buttons>
+          <Buttons handleClick={this.addToInput}>%</Buttons>
+          <Buttons handleClick={this.addToInput}>+</Buttons>
         </div>
         <div className='row'>
-          <Buttons>7</Buttons>
-          <Buttons>8</Buttons>
-          <Buttons>9</Buttons>
-          <Buttons>x</Buttons>
+          <Buttons handleClick={this.addToInput}>7</Buttons>
+          <Buttons handleClick={this.addToInput}>8</Buttons>
+          <Buttons handleClick={this.addToInput}>9</Buttons>
+          <Buttons handleClick={this.addToInput}>x</Buttons>
         </div>
         <div className='row'>
-          <Buttons>4</Buttons>
-          <Buttons>5</Buttons>
-          <Buttons>6</Buttons>
-          <Buttons>-</Buttons>
+          <Buttons handleClick={this.addToInput}>4</Buttons>
+          <Buttons handleClick={this.addToInput}>5</Buttons>
+          <Buttons handleClick={this.addToInput}>6</Buttons>
+          <Buttons handleClick={this.addToInput}>-</Buttons>
         </div>
         <div className='row'>
-          <Buttons>1</Buttons>
-          <Buttons>2</Buttons>
-          <Buttons>3</Buttons>
-          <Buttons>+</Buttons>
+          <Buttons handleClick={this.addToInput}>1</Buttons>
+          <Buttons handleClick={this.addToInput}>2</Buttons>
+          <Buttons handleClick={this.addToInput}>3</Buttons>
+          <Buttons handleClick={this.addToInput}>+</Buttons>
         </div>
         <div className='last-row'>
           <div className='hey'>
-          <Buttons>0</Buttons>
+          <Buttons handleClick={this.addToInput}>0</Buttons>
           </div>
-          <Buttons>.</Buttons>
-          <Buttons>=</Buttons>
+          <Buttons handleClick={this.addToInput}>.</Buttons>
+          <Buttons handleClick={this.addToInput}>=</Buttons>
         </div>
       </div>
     );
