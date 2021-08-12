@@ -9,25 +9,18 @@ const isOperator = (val) => {
   return !isNaN(val) || val === '.';
 };
 
-class Buttons extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-
-  render() {
-    return (
-      <div
-        className = {`button-wrapper ${
-          isOperator(this.props.children) ? null : 'operator'}`}
-          onClick= {() => {
-            this.props.handleClick(this.props.children);
-          }
-          }>
-        { this.props.children }
-      </div>
-    );
-  }
-}
+const Buttons = (props) => {
+  return (
+    <div
+      className = {`button-wrapper ${
+        isOperator(props.children) ? null : 'operator'}`}
+        onClick= {() => {
+          props.handleClick(props.children);
+        }
+        }>
+      { props.children }
+    </div>
+  );
+};
 
 export default Buttons;
