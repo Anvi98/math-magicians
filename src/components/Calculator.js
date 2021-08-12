@@ -1,79 +1,68 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable max-len */
-import React from 'react';
+import { React, useEffect, useState } from 'react';
 import Buttons from './Buttons.js';
 import Input from './Input.js';
 import calculate from '../logic/calculate.js';
 import operate from '../logic/operate.js';
 
-class Calculator extends React.Component {
-  constructor(props) {
-    super(props);
+const Calculator = () => {
+  const [obj, setObj] = useState({ total: null, next: null, operation: null });
 
-    this.state = {
-      total: null,
-      next: null,
-      operation: null,
-    };
-    this.addToInput = this.addToInput.bind(this);
-  }
-
-  addToInput = (val) => {
-    calculate(this.state, val);
-    const { next, total, operation } = calculate(this.state, val);
-    if (next !== undefined) {
-      this.setState({ next });
+  const addToInput = async (val) => {
+    let { next, total, operation } = await calculate(obj, val);
+    if (next === undefined) {
+      next = obj.next;
     }
 
-    if (total !== undefined) {
-      this.setState({ total });
+    if (total === undefined) {
+      total = obj.total;
     }
 
-    if (operation !== undefined) {
-      this.setState({ operation });
+    if (operation === undefined) {
+      operation = obj.operation;
     }
-  }
+    setObj({ total, next, operation });
+  };
 
-  render() {
-    return (
-      <div className='calculator'>
-        <div className="input-calc">
-        <Input input={this.state}/>
-        </div>
-      <div className='row'>
-          <Buttons handleClick={this.addToInput}>AC</Buttons>
-          <Buttons handleClick={this.addToInput}>+/-</Buttons>
-          <Buttons handleClick={this.addToInput}>%</Buttons>
-          <Buttons handleClick={this.addToInput}>÷</Buttons>
-        </div>
-        <div className='row'>
-          <Buttons handleClick={this.addToInput}>7</Buttons>
-          <Buttons handleClick={this.addToInput}>8</Buttons>
-          <Buttons handleClick={this.addToInput}>9</Buttons>
-          <Buttons handleClick={this.addToInput}>x</Buttons>
-        </div>
-        <div className='row'>
-          <Buttons handleClick={this.addToInput}>4</Buttons>
-          <Buttons handleClick={this.addToInput}>5</Buttons>
-          <Buttons handleClick={this.addToInput}>6</Buttons>
-          <Buttons handleClick={this.addToInput}>-</Buttons>
-        </div>
-        <div className='row'>
-          <Buttons handleClick={this.addToInput}>1</Buttons>
-          <Buttons handleClick={this.addToInput}>2</Buttons>
-          <Buttons handleClick={this.addToInput}>3</Buttons>
-          <Buttons handleClick={this.addToInput}>+</Buttons>
-        </div>
-        <div className='last-row'>
-          <div className='hey'>
-          <Buttons handleClick={this.addToInput}>0</Buttons>
-          </div>
-          <Buttons handleClick={this.addToInput}>.</Buttons>
-          <Buttons handleClick={this.addToInput}>=</Buttons>
-        </div>
+  return (
+    <div className='calculator'>
+      <div className="input-calc">
+      <Input input={obj}/>
       </div>
-    );
-  }
-}
+    <div className='row'>
+        <Buttons handleClick={addToInput}>AC</Buttons>
+        <Buttons handleClick={addToInput}>+/-</Buttons>
+        <Buttons handleClick={addToInput}>%</Buttons>
+        <Buttons handleClick={addToInput}>÷</Buttons>
+      </div>
+      <div className='row'>
+        <Buttons handleClick={addToInput}>7</Buttons>
+        <Buttons handleClick={addToInput}>8</Buttons>
+        <Buttons handleClick={addToInput}>9</Buttons>
+        <Buttons handleClick={addToInput}>x</Buttons>
+      </div>
+      <div className='row'>
+        <Buttons handleClick={addToInput}>4</Buttons>
+        <Buttons handleClick={addToInput}>5</Buttons>
+        <Buttons handleClick={addToInput}>6</Buttons>
+        <Buttons handleClick={addToInput}>-</Buttons>
+      </div>
+      <div className='row'>
+        <Buttons handleClick={addToInput}>1</Buttons>
+        <Buttons handleClick={addToInput}>2</Buttons>
+        <Buttons handleClick={addToInput}>3</Buttons>
+        <Buttons handleClick={addToInput}>+</Buttons>
+      </div>
+      <div className='last-row'>
+        <div className='hey'>
+        <Buttons handleClick={addToInput}>0</Buttons>
+        </div>
+        <Buttons handleClick={addToInput}>.</Buttons>
+        <Buttons handleClick={addToInput}>=</Buttons>
+      </div>
+    </div>
+  );
+};
 
 export default Calculator;
