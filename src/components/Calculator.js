@@ -4,6 +4,7 @@ import React from 'react';
 import Buttons from './Buttons.js';
 import Input from './Input.js';
 import calculate from '../logic/calculate.js';
+import operate from '../logic/operate.js';
 
 class Calculator extends React.Component {
   constructor(props) {
@@ -43,7 +44,7 @@ class Calculator extends React.Component {
           <Buttons handleClick={this.addToInput}>AC</Buttons>
           <Buttons handleClick={this.addToInput}>+/-</Buttons>
           <Buttons handleClick={this.addToInput}>%</Buttons>
-          <Buttons handleClick={this.addToInput}>+</Buttons>
+          <Buttons handleClick={this.addToInput}>÷</Buttons>
         </div>
         <div className='row'>
           <Buttons handleClick={this.addToInput}>7</Buttons>
