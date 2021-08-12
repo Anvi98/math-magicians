@@ -9,8 +9,8 @@ import operate from '../logic/operate.js';
 const Calculator = () => {
   const [obj, setObj] = useState({ total: null, next: null, operation: null });
 
-  const addToInput = async (val) => {
-    let { next, total, operation } = await calculate(obj, val);
+  const addToInput = (val) => {
+    let { next, total, operation } = calculate(obj, val);
     if (next === undefined) {
       next = obj.next;
     }
